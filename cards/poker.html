@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+
+   <title>Fisher-Yates shuffle in JavaScript</title>
+
+<head>
+
+   <button onClick = "fisher_yates()"> Fisher Yates</button>
+
+   <p id = "para"></p>
+
+   <script>
+
+      function fisher_yates(){
+
+         let array = [1,2,3,4,5,6,7,8,9,10,11,12];
+
+         let i = array.length;
+
+         while (--i > 0) {
+
+            let temp = Math.floor(Math.random() * (i + 1));
+
+            [array[temp], array[i]] = [array[i], array[temp]];
+
+         }
+         document.getElementById("para").innerHTML = array;
+         document.getElementById("myimage0").src = array[0]+'.gif';
+         document.getElementById("myimage1").src = array[1]+'.gif';
+         document.getElementById("myimage2").src = array[2]+'.gif';
+         document.getElementById("myimage3").src = array[3]+'.gif';
+         document.getElementById("myimage4").src = array[4]+'.gif';
+
+
+      }
+
+   </script>
+
+</head>
+
+<body>
+   
+    <img id="myimage0" src="0.gif" style="width:100px">
+    <img id="myimage1" src="0.gif" style="width:100px">
+    <img id="myimage2" src="0.gif" style="width:100px">
+    <img id="myimage3" src="0.gif" style="width:100px">
+    <img id="myimage4" src="0.gif" style="width:100px">
+
+
+</body>
+
+</html>
