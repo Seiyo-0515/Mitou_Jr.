@@ -1,0 +1,56 @@
+<html>
+
+    <head>
+
+        <script>
+            let text = "";
+            function roll(){
+            const dice =[0,0,0];
+            text =";"
+            for (let i= 0; i<3; i++){  
+                dice[i]= Math.floor(Math.random() * 6 +1);
+                document.getElementById('myImage'+i).src='dice'+ dice[i] +'.png'
+            }
+            
+            if(dice[0]==dice[1]){ //2 of a kind
+                text = '2 of a kind';
+
+            }else if(dice[0]==dice[2]){ //2 of a kind
+                text = '2 of a kind';
+
+            }else if(dice[1]==dice[2]){ //2 of a kind
+                text = '2 of a kind';
+       
+            }else if(dice[0]==dice[1], and , dice[1]==dice[2]){//3 of a kind
+                text = '3 of a kind';
+
+            }else{
+                text = 'noting';
+
+            }
+            document.getElementById('demo').innerHTML=text;
+            }
+           
+ 
+
+            
+
+        </script>
+
+    </head>
+
+    <body>
+
+        <h2>YAHTZEE</h2>
+
+        <button onclick="roll()">ROLL</button>
+
+        <img id="myImage0" src="dice1.png" style="width:100px">
+        <img id="myImage1" src="dice1.png" style="width:100px">
+        <img id="myImage2" src="dice1.png" style="width:100px">
+        
+        <p id="demo"></p>
+
+    </body>
+
+</html>
