@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="ja">
+<html>
+    <head>
+        <title>ZENSHIN Robotics</title>
+        <meta http-equiv="content-type" charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" /> <!--スマホやタブレット対応のデザイン用　デバイスの横幅を取得し比率で大きさを設定する-->
+        <meta name="description" content="郁文館夢学園内部に学生によって設立された一般社団法人「ZENSHIN」のホームページです" />
+
+        <!--==============レイアウトを制御する独自のCSSを読み込み===============-->
+<link rel="stylesheet" type="text/css" href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/reset.css">
+<link rel="stylesheet" type="text/css" href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/5-1-1/css/5-1-1.css">
+        
+        <!--
+        <meta property="og:url" content="ページのURL" /> 
+        <meta property="og:title" content="ページのタイトル" />
+        <meta property="og:type" content="ページのタイプ">
+        <meta property="og:description" content="記事の抜粋" />
+        <meta property="og:image" content="画像のURL" />
+        <meta name="twitter:card" content="カード種類" />
+        <meta name="twitter:site" content="@Twitterユーザー名" />
+        <meta property="og:site_name" content="サイト名" />
+        <meta property="og:locale" content="ja_JP" />
+        <meta property="fb:app_id" content="appIDを入力" /> 
+            -->
+        <!--SNSでシェアされた際にURLを表示するためのもの必要になったら編集-->
+       
+        <style>
+            @charset "utf-8";
+            @import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+                            /*========= ナビゲーションのためのCSS ===============*/
+
+
+                
+            * {
+            box-sizing: border-box;
+            }
+            body {
+            margin: 0;
+            padding: 0;
+            font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", メイリオ, Meiryo, "ＭＳ Ｐゴシック", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            background-color: rgb(255, 255, 255);
+            
+            }
+            header {
+            padding: 21px 5% 10px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #333;
+            display: flex;
+            align-items: center;
+            z-index: 10;
+            }
+            h1 {
+            margin: 0; padding: 0;
+            font-size: 30px;
+            }
+            .name a {
+            margin: 0; padding: 0;
+            font-size: 25px;
+            }
+            .Logo {	
+            text-decoration: none;
+            font-size: 20px;
+            color: #ffffff;
+            }
+
+            .over-erea {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('https://kabekin.com/uploads/converted/23/06/28/3937872982-network_orbit_2023_0628_pc_wallpaper_1920_kabekin-2xmv-1280x720-MM-100.jpg') top center / cover no-repeat;
+            background-attachment: fixed;
+    
+            }
+            .over-erea h2 {
+            font-family: "Black Ops One";
+            margin: 0;
+            font-size: 50px;
+            font-weight: normal;
+            color: #f4350f;
+            
+            }
+
+            div.anchor{
+            display: block;
+            padding-top: 85px;
+            margin-top: -70px;
+            }
+
+            .partition{
+                background-color: #e0e0e0;
+                box-orient: horizontal;
+                width: 100%;
+                height: 100px;   
+                align-items:center; 
+                padding: 21px 5% 25px;
+
+            }
+
+            /*========= ページトップのためのCSS ===============*/
+            /*リンクの形状*/
+            #page-top a{
+                display: flex;
+                justify-content:center;
+                align-items:center;
+                background:#942D2F;
+                border-radius: 5px;
+                width: 60px;
+                height: 60px;
+                color: #fff;
+                text-align: center;
+                text-transform: uppercase; 
+                text-decoration: none;
+                font-size:0.6rem;
+                transition:all 0.3s;
+                box-shadow: 0 4px 6px rgb(0 0 0 / 30%);
+            }
+
+            #page-top a:hover{
+                background: #777777;
+            }
+
+            /*リンクを右下に固定*/
+            #page-top {
+                position: fixed;
+                right: 10px;
+                z-index: 2;
+                /*はじめは非表示*/
+                opacity: 0;
+                transform: translateY(100px);
+            }
+
+            /*　上に上がる動き　*/
+
+            #page-top.UpMove{
+                animation: UpAnime 0.5s forwards;
+            }
+            @keyframes UpAnime{
+            from {
+                opacity: 0;
+                transform: translateY(100px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            }
+
+            /*　下に下がる動き　*/
+
+            #page-top.DownMove{
+                animation: DownAnime 0.5s forwards;
+            }
+            @keyframes DownAnime{
+            from {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(100px);
+            }
+            }
+
+            /*検証のためのCSS*/
+            section{
+            padding: 500px 0;
+            }
+
+            #footer{
+            background:#2d2d2d;
+            color: #ffffff;
+            } 
+            ul {
+                padding: 0;
+                list-style: none;
+                }
+
+a {
+  color: #ababab;
+  text-decoration: none;
+}
+
+
+a:hover {
+  color: #ffffff;
+}
+
+hr {
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #e5e7eb;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer {
+  padding: 2rem;
+  font-size: 15px;
+  color: #4b5564;
+  background: #fff;
+}
+
+.footer__navi-heading {
+  font-weight: 600;
+}
+
+.footer__logo {
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+
+.footer__navi li {
+  margin-bottom: 0.75rem;
+}
+
+
+@media (min-width: 768px) {
+  .md-flex {
+    display: flex;
+  }
+
+  .md-justify-between {
+    justify-content: space-between;
+  }
+
+  .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/*== ボタン共通設定 */
+.btn{
+    /*アニメーションの起点とするためrelativeを指定*/
+    position: relative;
+	overflow: hidden;
+    /*ボタンの形状*/
+	text-decoration: none;
+	display: inline-block;
+   	border: 0px solid;/* ボーダーの色と太さ */
+    padding: 10px 30px;
+    text-align: center;
+    outline: none;
+    border-radius:10px 30px 50px 70px;
+    /*アニメーションの指定*/   
+    transition: ease .2s;
+    background-color: rgb(222, 81, 0);
+    width: 300px;
+    height: 60px;
+}
+
+/*ボタン内spanの形状*/
+.btn span {
+	position: relative;
+	z-index: 2;/*z-indexの数値をあげて文字を背景よりも手前に表示*/
+	color:#ffffff;
+}
+
+.btn:hover span{
+	color:#fff;
+}
+
+/*== 背景が流れる（斜め） */
+.bgskew::before {
+	content: '';
+    /*絶対配置で位置を指定*/
+	position: absolute;
+	top: 0;
+	left: -130%;
+    /*色や形状*/
+	background:#4346ff;
+	width:120%;
+	height: 100%;
+	transform: skewX(-25deg);
+}
+
+/*hoverした時のアニメーション*/
+.bgskew:hover::before {
+	animation: skewanime .5s forwards;/*アニメーションの名前と速度を定義*/
+}
+
+@keyframes skewanime {
+	100% {
+		left:-10%;/*画面の見えていない左から右へ移動する終了地点*/
+	}
+}
+
+/*========= ナビゲーションドロップダウンのためのCSS ===============*/
+
+/*==ナビゲーション全体の設定*/
+nav{
+  background:#333;
+  color:#fff;
+  text-align: center;
+  margin: 0 1px 0 auto;
+  
+}
+/*ナビゲーションを横並びに*/
+nav ul{
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+/*2階層目以降は横並びにしない*/
+nav ul ul{
+  display: block;
+}
+
+/*下の階層のulや矢印の基点にするためliにrelativeを指定*/
+nav ul li{
+  position: relative;
+}
+
+/*ナビゲーションのリンク設定*/
+nav ul li a{
+  display: block;
+  text-decoration: none;
+  color: #ffffff;
+  padding:20px 30px;
+  transition:all .3s;
+  font-size: 15px;
+}
+
+nav ul li li a{
+  padding:10px 35px;
+}
+
+nav ul li a:hover{
+  color:#fff; 
+}
+
+/*==矢印の設定*/
+
+/*2階層目を持つliの矢印の設定*/
+nav ul li.has-child::before{
+  content:'';
+  position: absolute;
+  left:15px;
+  top:25px;
+  width:6px;
+  height:6px;
+  border-top: 2px solid #ffffff;
+    border-right:2px solid #ffffff;
+    transform: rotate(135deg);
+}
+
+/*3階層目を持つliの矢印の設定*/
+nav ul ul li.has-child::before{
+  content:'';
+  position: absolute;
+  left:6px;
+  top:17px;
+  width:6px;
+  height:6px;
+    border-top: 2px solid #fff;
+    border-right:2px solid #fff;
+    transform: rotate(45deg);
+}
+
+/*== 2・3階層目の共通設定 */
+
+/*下の階層を持っているulの指定*/
+nav li.has-child ul{
+    /*絶対配置で位置を指定*/
+  position: absolute;
+  left:0;
+  top:62px;
+  z-index: 4;
+    /*形状を指定*/
+  background:#28BFE7;
+  width:180px;
+    /*はじめは非表示*/
+  visibility: hidden;
+  opacity: 0;
+    /*アニメーション設定*/
+  transition: all .3s;
+}
+
+/*hoverしたら表示*/
+nav li.has-child:hover > ul,
+nav li.has-child ul li:hover > ul,
+nav li.has-child:active > ul,
+nav li.has-child ul li:active > ul{
+  visibility: visible;
+  opacity: 1;
+}
+
+/*ナビゲーションaタグの形状*/
+nav li.has-child ul li a{
+  color: #fff;
+  border-bottom:solid 1px rgba(255,255,255,0.6);
+}
+
+nav li.has-child ul li:last-child a{
+  border-bottom:none;
+}
+
+nav li.has-child ul li a:hover,
+nav li.has-child ul li a:active{
+  background:#3577CA;
+}
+
+
+/*==3階層目*/
+
+/*3階層目の位置*/
+nav li.has-child ul ul{
+  top:0;
+  left:182px;
+  background:#66ADF5;
+}
+
+nav li.has-child ul ul li a:hover,
+nav li.has-child ul ul li a:active{
+  background:#448ED3;
+}
+
+
+/*==768px以下の形状*/
+
+@media screen and (max-width:768px){
+  nav{
+    padding: 0;
+  }
+  
+  nav ul{
+    display: block;
+  }
+  
+  nav li.has-child ul,
+  nav li.has-child ul ul{
+    position: relative;
+  left:0;
+  top:0;
+  width:100%;
+  visibility:visible;/*JSで制御するため一旦表示*/
+  opacity:1;/*JSで制御するため一旦表示*/
+  display: none;/*JSのslidetoggleで表示させるため非表示に*/
+  transition:none;/*JSで制御するためCSSのアニメーションを切る*/
+}
+  
+nav ul li a{
+  border-bottom:1px solid #ccc;
+}
+
+/*矢印の位置と向き*/
+
+nav ul li.has-child::before{
+  left:20px;  
+}
+
+nav ul ul li.has-child::before{
+    transform: rotate(135deg);
+  left:20px;
+}
+    
+nav ul li.has-child.active::before{
+    transform: rotate(-45deg);
+}
+
+}
+
+        </style>
+    
+  </head>
+    <body>
+
+        <header>
+            <div class="name">
+            <h1>
+                <a href="zenshinhome.html" class="Logo">Title</a>
+            </h1>
+        </div>
+
+        <nav>
+          <ul>
+            <li><a href="#">Top</a></li>
+            <li><a href="#">お知らせ</a></li>
+            <li class="has-child"><a href="#">組織概要</a>
+              <ul>
+              <li><a href="#">理事<br>メッセージ</a></li>
+              <li><a href="#">活動理念</a></li>
+              <li><a href="#">沿革</a></li>
+              <li><a href="#">組織図</a></li>
+              </ul>
+            </li>
+              <li class="has-child"><a href="#">Robotics Team</a>
+                <ul>
+                <li><a href="#">目標</a></li>
+                <li><a href="#">活動理念</a></li>
+                </ul>
+            </li>
+            <li class="has-child"><a href="#">メンバー加入について</a>
+              <ul>
+              <li><a href="#">加入条件</a></li>
+              <li><a href="#">学生向け</a></li>
+              <li><a href="#">メンター向け</a></li>
+              </ul>
+          </li>
+            
+            <li class="has-child"><a href="#">法人の方へ</a>
+              <ul>
+              <li><a href="#">スポンサーシップについて</a></li>
+              </ul>
+            </li>
+            <li><a href="#">IR情報</a></li>
+            <li><a href="#">プライバシーポリシー</a></li>
+          </ul>
+        </nav>
+
+        </header>
+        <!--
+          一層目
+           <li class="has-child"><a href="#">Robotics Team</a>
+                <ul>
+                <li><a href="#">目標</a></li>
+                <li><a href="#">活動理念</a></li>
+                </ul>
+            </li>
+            
+            二層目
+          <li class="has-child"><a href="#">Service-2</a>
+                <ul>
+                  <li><a href="#">Service-2 Top</a></li>
+                  <li><a href="#">Service-2-1</a></li>
+                  <li><a href="#">Service-2-2</a></li>
+                  <li><a href="#">Service-2-3</a></li>
+                  <li><a href="#">Service-2-4</a></li>
+                </ul>
+              </li>
+            -->
+
+
+
+        <div class="over-erea">
+            <h2>ZENSHIN Robotics</h2>
+        </div>
+        
+        
+        <main role="main">
+                <div class="partition">
+                </div>
+            <br>
+                <div id="Team-vision" class="anchor">
+                    <h3>チーム活動に参加する一人一人が目標を掲げ</h3>
+                    <br>
+                    <br>それに向かい主体的かつ精力的に挑戦することでそれぞれにとって成長する場となること
+                        テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                </div><br><br>
+                
+                <div class="partition">
+                </div>
+                
+                <div id="Team-mission" class="anchor">
+
+                    <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+
+                </div><br><br>
+
+                
+                <div id="Team-value" class="anchor">
+
+                    <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+
+                </div><br><br>
+
+                
+                <div id="About-Membership" class="anchor">
+
+                    <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+
+                </div><br><br>
+        </main>
+
+    <footer id="footer" class="footer"><!--footerの手前で止まるようにする-->
+        <p id="page-top"><a href="#">Page Top</a></p>
+        <div class="md-flex md-justify-between">
+            <a href="zenshinhome.html" class="Logo">ZENSHIN</a>
+            <div class="grid">
+              <div>
+                <p class="footer__navi-heading">SERVICE</p>
+                <ul class="footer__navi">
+                  <li><a href="#">サービスA</a></li>
+                  <li><a href="#">サービスB</a></li>
+                  <li><a href="#">サービスC</a></li>
+                </ul>
+              </div>
+
+              <div>
+                <p class="footer__navi-heading">ABOUT</p>
+                <ul class="footer__navi">
+                  <li><a href="#">組織概要</a></li>
+                  <li><a href="#">お問い合わせ</a></li>
+                  <li><a href="#">サイトマップ</a></li>
+                  <li><a href="#" >メンバー加入について</a></li>
+                  <li><a href="#">プライバシーポリシー</a></li>
+                <li><a href="https://www.ikubunkan.ed.jp/" target="_blank">郁文館公式ホームページ</a></li> 
+                </ul>
+              </div>
+              <div>
+                <p class="footer__navi-heading" href="">お問い合わせについて</p>
+                <ul class="footer__navi">
+                  <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSd8GKDNcfPlG2vmHYdd13HJS-lN4TCWLjToA7LW3olIjaMuVQ/viewform?usp=sharing" target="_blank" class="btn bgskew"><span>企業向けお問い合わせフォーム（仮）</span></a></li>
+                  <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSfcqkEEi1EuUNOQTFzosC4hgfXjPf_k0x1EpqFeyjNdRbHVVw/viewform?usp=sharing" target="_blank" class="btn bgskew"><span>個人向けお問い合わせフォーム（仮）</span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <hr />
+          <p class="copyright">© 2023 <a href="zenshinhome.html">ZENSHIN Inc.</a> 
+          </p>
+    </footer>
+
+
+    
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <!--自作のJS-->  
+    <script src="scroll.js"></script>
+    <script src="gototop.js"></script>
+    <script src="menu.js"></script>
+        
+    </body>
+</html>
