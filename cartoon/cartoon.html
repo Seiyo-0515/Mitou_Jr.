@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            const cartoons = ["minions.jpg","cars.jpg","toons.jpg"];
+
+            function myfunction(){
+                var num = 0;
+                num = Math.floor(Math.random()*3);
+                images = cartoons[num];
+                document.getElementById("myImage").src = images;
+
+            }
+        </script>
+    </head>
+    <body>
+        <h2>Random Pictures</h2>
+
+        <img id="myImage" src="cars.jpg" style="width:300px">
+        <p></p>
+        <button type="button" onclick="myfunction()">Give me a romdam cartoon</button>
+
+    </body>
+</html>
